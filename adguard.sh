@@ -38,11 +38,11 @@ else
           apk del libnetstub-deps; \
       fi; \
       . /.libnetstub/libnetstub.sh; \
-      mkdir -p /var/log/home-assistant; \
-      rm -f /var/log/home-assistant/*.log; \
-      touch /var/log/home-assistant/{stdout,stderr}.log; \
-      tail -F /var/log/home-assistant/stdout.log & \
-      tail -F /var/log/home-assistant/stderr.log >&2 & \
+      mkdir -p /var/log/adguardhome; \
+      rm -f /var/log/adguardhome/*.log; \
+      touch /var/log/adguardhome/{stdout,stderr}.log; \
+      tail -F /var/log/adguardhome/stdout.log & \
+      tail -F /var/log/adguardhome/stderr.log >&2 & \
       command -v start-stop-daemon &>/dev/null || apk add --no-cache openrc; \
       command -v yq &>/dev/null || apk add --no-cache yq; \
       [ -f /config/configuration.yaml ] || echo -e "assist_pipeline:\nbluetooth:\ncloud:\nconversation:\nenergy:\ngo2rtc:\nhistory:\nhomeassistant_alerts:\nlogbook:\nmedia_source:\nmobile_app:\nmy:\nssdp:\nstream:\nsun:\nusb:\nwebhook:\nzeroconf:\nfrontend:\n  themes: !include_dir_merge_named themes\nautomation: !include automations.yaml\nscript: !include scripts.yaml\nscene: !include scenes.yaml" > /config/configuration.yaml; \
