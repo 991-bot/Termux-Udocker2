@@ -4,7 +4,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 
-IMAGE_NAME="homeassistant/home-assistant:stable"
+IMAGE_NAME="dustynv/homeassistant-core"
 CONTAINER_NAME="home-assistant-core"
 
 case $PORT in
