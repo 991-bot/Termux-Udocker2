@@ -3,9 +3,9 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-IMAGE_NAME="homeassistant/home-assistant"
+IMAGE_NAME="adguard/adguardhome"
 
-CONTAINER_NAME="home-assistant-server"
+CONTAINER_NAME="adguardhome"
 
 case $PORT in
     ''|*[!0-9]*) PORT=8123;;
