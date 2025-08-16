@@ -4,8 +4,8 @@ source "$(dirname "${BASH_SOURCE[0]}")/source.env"
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 
-IMAGE_NAME="dustynv/homeassistant-core"
-CONTAINER_NAME="home-assistant-core"
+IMAGE_NAME="linuxserver/homeassistant"
+CONTAINER_NAME="home-assistant-core1"
 
 case $PORT in
     ''|*[!0-9]*) PORT=8123;;
